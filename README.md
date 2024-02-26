@@ -47,7 +47,7 @@
     Связь между "Orders" и "OrderDetails"
     Связь между "Products" и "OrderDetails"
 
-Скрипт формирования таблиц и связей: *см.  [ветка config](https://github.com/fangarh/OTUS_PG/tree/config)*
+Скрипт формирования таблиц и связей: [create_tables.sql](https://github.com/fangarh/OtusNetHometasks/blob/t1/create_tables.sql)
 
 
 # SQL запросы:
@@ -59,3 +59,4 @@
     Получение 5 самых дорогих товаров
     Список товаров с низким запасом (менее 5 штук)
 
+Скрипт заполнения таблиц и выборки по заданию: [queries.sql](https://github.com/fangarh/OtusNetHometasks/blob/t1/queries.sql)
