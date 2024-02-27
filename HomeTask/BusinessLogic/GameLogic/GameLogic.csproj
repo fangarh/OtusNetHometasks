@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyVersion>1.0.0227.23373</AssemblyVersion>
-    <FileVersion>1.0.0227.23373</FileVersion>
+    <AssemblyVersion>1.0.0227.30511</AssemblyVersion>
+    <FileVersion>1.0.0227.30511</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
