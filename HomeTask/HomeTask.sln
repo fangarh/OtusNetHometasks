@@ -1,23 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{9D910228-7419-4F78-8A35-49E6BD1ED1CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UX", "UX", "{D241F5AE-BA38-44A9-AF5A-A6643B77E0D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessObjects", "BusinessObjects", "{FDBCEA38-0FDD-4740-8A6C-14FC51032A8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessContracts", "BusinessObjects\BusinessContracts\BusinessContracts.csproj", "{08F5E227-8BB1-408E-B263-263686CA7747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessContracts", "BusinessObjects\BusinessContracts\BusinessContracts.csproj", "{08F5E227-8BB1-408E-B263-263686CA7747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects\BusinessObjects.csproj", "{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BusinessObjects\BusinessObjects\BusinessObjects.csproj", "{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "BusinessLogic\GameLogic\GameLogic.csproj", "{9F25E4B6-D70D-4BF8-8180-9C6410C62207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumberGame", "UX\RandomNumberGame\RandomNumberGame.csproj", "{FCB089B7-1BDD-4288-9140-AEFBD5A72ADF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{08F5E227-8BB1-408E-B263-263686CA7747} = {FDBCEA38-0FDD-4740-8A6C-14FC51032A8F}
-		{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98} = {FDBCEA38-0FDD-4740-8A6C-14FC51032A8F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{08F5E227-8BB1-408E-B263-263686CA7747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -28,5 +31,25 @@ Global
 		{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F25E4B6-D70D-4BF8-8180-9C6410C62207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F25E4B6-D70D-4BF8-8180-9C6410C62207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F25E4B6-D70D-4BF8-8180-9C6410C62207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F25E4B6-D70D-4BF8-8180-9C6410C62207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB089B7-1BDD-4288-9140-AEFBD5A72ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB089B7-1BDD-4288-9140-AEFBD5A72ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB089B7-1BDD-4288-9140-AEFBD5A72ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB089B7-1BDD-4288-9140-AEFBD5A72ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08F5E227-8BB1-408E-B263-263686CA7747} = {FDBCEA38-0FDD-4740-8A6C-14FC51032A8F}
+		{A0AF85EE-42B6-43FE-B5E3-3D9D0E76EE98} = {FDBCEA38-0FDD-4740-8A6C-14FC51032A8F}
+		{9F25E4B6-D70D-4BF8-8180-9C6410C62207} = {9D910228-7419-4F78-8A35-49E6BD1ED1CA}
+		{FCB089B7-1BDD-4288-9140-AEFBD5A72ADF} = {D241F5AE-BA38-44A9-AF5A-A6643B77E0D2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EB19523-A7FD-4AC4-B03D-2A41D6A94C0B}
 	EndGlobalSection
 EndGlobal
