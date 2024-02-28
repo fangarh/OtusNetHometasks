@@ -1,4 +1,5 @@
 ﻿using BusinessContracts;
+using Logic.Serialization.Helpers;
 
 namespace Logic.Serialization
 {

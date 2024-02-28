@@ -4,7 +4,7 @@ using System.Text;
 using BusinessContracts;
 using BusinessObjects;
 
-namespace Logic.Serialization
+namespace Logic.Serialization.Helpers
 {
     public class SerializedStringBuilder : IMyExtSerializeBuilder
     {
@@ -15,17 +15,17 @@ namespace Logic.Serialization
             _dictionary.Clear();
         }
 
-        public void Append(string property, object  data)
+        public void Append(string property, object data)
         {
             if (_dictionary.ContainsKey(property))
                 throw new DuplicateNameException($"Key {property} already exists");
 
-            _dictionary.Add(property, data??Constants.NullValue);
+            _dictionary.Add(property, data ?? Constants.NullValue);
         }
 
         public object Get(string property)
         {
-            if(!_dictionary.ContainsKey(property))
+            if (!_dictionary.ContainsKey(property))
                 throw new NullReferenceException($"Property {property} not found in collection");
 
             if (_dictionary[property] == null || _dictionary[property].ToString().Equals($"{Constants.NullValue}"))
@@ -67,17 +67,15 @@ namespace Logic.Serialization
             }
         }
 
-        public void SaveToFile (string path)
+        public void SaveToFile(string path)
         {
-            if(File.Exists(path))
+            if (File.Exists(path))
                 File.Delete(path);
 
-            //File.Create(path);
-            
             File.WriteAllText(path, SerializeToString());
         }
 
-        public void LoadFromFile (string path)
+        public void LoadFromFile(string path)
         {
             if (!File.Exists(path))
                 throw new FileNotFoundException();

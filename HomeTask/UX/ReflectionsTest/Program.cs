@@ -19,13 +19,14 @@ namespace ReflectionsTest
             Console.WriteLine("Рукописная сериализация");
             Console.WriteLine("******************************************");
 
-            var time = TimeMeasureHelper.Measure(() => stringForSerialization = test.MySerializationTest(serializer, classForTest, 500));
-            Console.WriteLine($"Сериализованная строка: {stringForSerialization}");
-            Console.WriteLine(BuildTimespanMessage(time, "потрачено на 500 сериализаций"));
+            var time = TimeMeasureHelper.Measure(() => stringForSerialization = test.MySerializationTest(serializer, classForTest, Constants.TestCount));
+            Console.WriteLine($"Сериализованная строка: ");
+            Console.WriteLine($"{stringForSerialization}");
+            Console.WriteLine(BuildTimespanMessage(time, $"потрачено на {Constants.TestCount} сериализаций"));
 
-            time = TimeMeasureHelper.Measure(() => classForTest = test.MyDeserializationTest<ClassForTests>(serializer, stringForSerialization, 500));
+            time = TimeMeasureHelper.Measure(() => classForTest = test.MyDeserializationTest<ClassForTests>(serializer, stringForSerialization, Constants.TestCount));
 
-            Console.WriteLine(BuildTimespanMessage(time, "потрачено на 500 десериализаций"));
+            Console.WriteLine(BuildTimespanMessage(time, $"потрачено на {Constants.TestCount} десериализаций"));
 
             time = TimeMeasureHelper.Measure(() => Console.WriteLine("Замер вывода в консоль"));
 
@@ -34,20 +35,20 @@ namespace ReflectionsTest
             Console.WriteLine("Сериализация в JSON");
             Console.WriteLine("******************************************");
             serializer = new MyJsonSerializer();
-            time = TimeMeasureHelper.Measure(() => stringForSerialization = test.MySerializationTest(serializer, classForTest, 500));
+            time = TimeMeasureHelper.Measure(() => stringForSerialization = test.MySerializationTest(serializer, classForTest, Constants.TestCount));
             Console.WriteLine($"Сериализованная строка: {stringForSerialization}");
-            Console.WriteLine(BuildTimespanMessage(time, "потрачено на 500 сериализаций"));
+            Console.WriteLine(BuildTimespanMessage(time, $"потрачено на {Constants.TestCount} сериализаций"));
 
-            time = TimeMeasureHelper.Measure(() => classForTest = test.MyDeserializationTest<ClassForTests>(serializer, stringForSerialization, 500));
+            time = TimeMeasureHelper.Measure(() => classForTest = test.MyDeserializationTest<ClassForTests>(serializer, stringForSerialization, Constants.TestCount));
 
-            Console.WriteLine(BuildTimespanMessage(time, "потрачено на 500 десериализаций"));
+            Console.WriteLine(BuildTimespanMessage(time, $"потрачено на {Constants.TestCount} десериализаций"));
 
             Console.ReadKey();
         }
 
         private static string BuildTimespanMessage(TimeSpan t, string message)
         {
-            return $"{t.ToString()} {message}";
+            return $"{t.Seconds}сек {t.Milliseconds}мс {message}";
         }
     }
 }
