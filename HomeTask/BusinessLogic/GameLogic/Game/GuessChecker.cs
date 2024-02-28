@@ -44,6 +44,7 @@ namespace GameLogic.Game
         {
             _guessingNumber = guessNumber;
             TryCount = 0;
+            _initialized = true;
         }
     }
 }

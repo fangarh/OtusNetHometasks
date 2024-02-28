@@ -3,8 +3,9 @@
     public class BonesRandomGenerator:RandomNumberGenerator
     {
         private readonly int _bonesNumber;
+        private readonly Random _random;
 
-        public new int RandomNumber => DropBones();
+        public override int RandomNumber => DropBones();
 
         public BonesRandomGenerator(int bonesNumber = 2)
         {

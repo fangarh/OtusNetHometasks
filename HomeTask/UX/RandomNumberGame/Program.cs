@@ -1,4 +1,6 @@
-﻿using GameLogic.Helpers;
+﻿using GameLogic.Game;
+using GameLogic.Helpers;
+using GameLogic.Logger;
 
 namespace RandomNumberGame
 {
@@ -6,14 +8,11 @@ namespace RandomNumberGame
     {
         static void Main(string[] args)
         {
-            ExtRandomNumberGenerator erd = new();
-            BonesRandomGenerator brd = new(3);
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"ER: {erd.RandomNumber} BR: {brd.RandomNumber}");
-            }
-
-            Console.ReadKey();
+            var logger = new MyMemoryLogger();
+            var guessChecker = new GuessChecker(logger);
+            var rnd = new BonesRandomGenerator(4);
+            GuessNumberGame game = new(guessChecker, rnd, logger);
+            game.Play(5,2);
         }
     }
 }

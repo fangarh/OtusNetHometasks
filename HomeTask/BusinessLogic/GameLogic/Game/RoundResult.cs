@@ -4,6 +4,7 @@
     {
         Exit, 
         Win,
-        Loose
+        Loose,
+        Play
     }
 }

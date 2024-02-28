@@ -9,7 +9,8 @@ namespace GameLogic.Helpers
     public class ExtRandomNumberGenerator:RandomNumberGenerator
     {
         private int _upperVal;
-        public new int RandomNumber => _random.Next(_upperVal);
+        private readonly Random _random;
+        public override int RandomNumber => _random.Next(_upperVal);
 
         public ExtRandomNumberGenerator(int upperVal = 1000)
         {

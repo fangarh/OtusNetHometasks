@@ -4,13 +4,11 @@ namespace GameLogic.Helpers
 {
     public class RandomNumberGenerator : IRandomNumberGenerator 
     {
-        protected Random _random;
-
-        public int RandomNumber => _random.Next();
+        public virtual int RandomNumber { get; }
 
         public RandomNumberGenerator()
         {
-            _random = new Random();
+           
         }
     }
 }
